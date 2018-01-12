@@ -1,4 +1,5 @@
 import {Injectable} from '@angular/core';
+import {Buyers} from '../models/buyers';
 
 @Injectable()
 export class BuyersServiceService {
@@ -42,6 +43,12 @@ export class BuyersServiceService {
 
     public getBuyers() {
        return this.buyers;
+    }
+
+    public addBuyer(finalid, firstName, lastName, email, product) {
+        const buyer = new Buyers(finalid, firstName, lastName, email, product);
+
+        this.buyers.push(buyer);
     }
 
 

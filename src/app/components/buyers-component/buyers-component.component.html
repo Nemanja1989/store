@@ -1,22 +1,44 @@
 <p>
-  buyers-component works!
+    buyers-component works!
 </p>
 
+<form class="">
+    <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" name="firstName" class="form-control" id="firstName" placeholder="Enter First Name"
+               [(ngModel)]="firstName">
+    </div>
+    <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" name="lastName" class="form-control" id="lastName" placeholder="Enter Last Name"
+               [(ngModel)]="lastName">
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" name="email" class="form-control" id="email" placeholder="Enter Email"
+               [(ngModel)]="email">
+    </div>
+
+    <button class="btn btn-primary" (click)="addBuyer()">Submit</button>
+</form>
+
 <table class="table table-hover">
-  <thead>
-  <tr>
-    <th scope="col">First Name</th>
-    <th scope="col">Last Name</th>
-    <th scope="col">Email</th>
-    <th scope="col">Menu</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr class="table-light" *ngFor="let buyer of buyers ">
-    <td>{{buyer.firstName}}</td>
-    <td>{{buyer.lastName}}</td>
-    <td>{{buyer.email}}</td>
-    <td><button class="btn btn-danger" (click)="removeBuyer(buyer)">Delete</button></td>
-  </tr>
-  </tbody>
+    <thead>
+    <tr>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Menu</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="table-light" *ngFor="let buyer of buyers ">
+        <td>{{buyer.firstName}}</td>
+        <td>{{buyer.lastName}}</td>
+        <td>{{buyer.email}}</td>
+        <td>
+            <button class="btn btn-danger" (click)="removeBuyer(buyer)">Delete</button>
+        </td>
+    </tr>
+    </tbody>
 </table>

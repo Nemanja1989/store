@@ -8,7 +8,7 @@ export class Buyers {
     email;
     products;
 
-    constructor(id: number, firstName: string, lastName: string, email: string, products: Products  ) {
+    constructor(id: number, firstName: string, lastName: string, email: string, products?: Products  ) {
         // no need for this but lets stay for now
         this.id        = id;
         this.firstName = firstName;
