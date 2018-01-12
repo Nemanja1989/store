@@ -8,6 +8,7 @@ import {LayoutComponent} from './components/layout/layout.component';
 import {NavbarComponent} from './components/navbar/navbar.component';
 import {BuyersComponentComponent} from './components/buyers-component/buyers-component.component';
 import {ProductsComponentComponent} from './components/products-component/products-component.component';
+import {BuyersServiceService} from './services/buyers-service.service';
 
 
 const appRoutes: Routes = [
@@ -30,7 +31,9 @@ const appRoutes: Routes = [
             appRoutes
         )
     ],
-    providers: [],
+    providers: [
+        BuyersServiceService
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {
