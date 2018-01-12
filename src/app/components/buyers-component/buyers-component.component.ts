@@ -23,7 +23,6 @@ export class BuyersComponentComponent implements OnInit {
         this.buyers = this._buyersService.getBuyers();
     }
 
-
     removeBuyer(buyer) {
         const index = this.buyers.indexOf(buyer);
         this.buyers.splice(index, 1);

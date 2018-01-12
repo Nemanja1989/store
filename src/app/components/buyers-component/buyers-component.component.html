@@ -36,8 +36,9 @@
         <td>{{buyer.firstName}}</td>
         <td>{{buyer.lastName}}</td>
         <td>{{buyer.email}}</td>
-        <td>
-            <button class="btn btn-danger" (click)="removeBuyer(buyer)">Delete</button>
+        <td class="d-inline">
+            <button class="btn-sm btn-danger" (click)="removeBuyer(buyer)">Delete</button>
+            <a class=" btn-sm btn-success" [routerLink]="['/buyers', buyer.id]"  routerLinkActive="active">Details</a>
         </td>
     </tr>
     </tbody>
