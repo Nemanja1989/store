@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ProductsService} from '../../services/products.service';
+import {ProductsFilterPipe} from '../../pipes/products-filter.pipe';
 
 @Component({
     selector: 'app-products-component',
@@ -8,7 +9,8 @@ import {ProductsService} from '../../services/products.service';
 })
 export class ProductsComponentComponent implements OnInit {
 
-    private products;
+    public products;
+    productFilter = '';
 
     constructor(private _productsService: ProductsService) {
         this.products = this._productsService.getProducts();

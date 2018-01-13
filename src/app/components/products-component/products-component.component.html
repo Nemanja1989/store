@@ -1,8 +1,7 @@
-<p>
-    products-component works!
-</p>
-
-
+<br>
+Filter Product:  <input type="text" name="" [(ngModel)] = "productFilter">
+<br>
+<br>
 
 <table class="table table-hover">
     <thead>
@@ -12,7 +11,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr class="table-light" *ngFor="let product of products ">
+    <tr class="table-light" *ngFor="let product of products | productsFilter:productFilter">
         <td>{{product.name}}</td>
         <td>{{product.quantity}}</td>
     </tr>

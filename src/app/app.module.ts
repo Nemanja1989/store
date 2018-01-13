@@ -12,6 +12,7 @@ import {ProductsComponentComponent} from './components/products-component/produc
 import {BuyersServiceService} from './services/buyers-service.service';
 import {BuyerDetailsComponent} from './components/buyer-details/buyer-details.component';
 import {ProductsService} from './services/products.service';
+import {ProductsFilterPipe} from './pipes/products-filter.pipe';
 
 
 const appRoutes: Routes = [
@@ -28,7 +29,8 @@ const appRoutes: Routes = [
         NavbarComponent,
         BuyersComponentComponent,
         ProductsComponentComponent,
-        BuyerDetailsComponent
+        BuyerDetailsComponent,
+        ProductsFilterPipe
     ],
     imports: [
         BrowserModule,
