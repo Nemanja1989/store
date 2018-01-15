@@ -34,4 +34,23 @@ export class ProductsService {
         return this.products;
     }
 
+    public addNewProductOnLager(product) {
+        const index = this.products.indexOf(product);
+        const lagerCount = this.products[index]['quantity'];
+
+        this.products[index]['quantity']++;
+    }
+
+    public removeProductFromLager(product) {
+        const index = this.products.indexOf(product);
+        const lagerCount = this.products[index]['quantity'];
+
+        // can't go to minus
+        if (lagerCount === 0) {
+            return false;
+        }
+
+        this.products[index]['quantity']--;
+    }
+
 }

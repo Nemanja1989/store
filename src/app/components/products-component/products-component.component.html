@@ -8,12 +8,17 @@ Filter Product:  <input type="text" name="" [(ngModel)] = "productFilter">
     <tr>
         <th scope="col">Product Name</th>
         <th scope="col">Product Quantity</th>
+        <th scope="col">Menu</th>
     </tr>
     </thead>
     <tbody>
     <tr class="table-light" *ngFor="let product of products | productsFilter:productFilter">
         <td>{{product.name}}</td>
         <td>{{product.quantity}}</td>
+        <td>
+            <button class="btn btn-success" (click)="addNewProductOnLager(product)">+</button>
+            <button class="btn btn-danger" (click)="removeProductFromLager(product)">-</button>
+        </td>
     </tr>
     </tbody>
 </table>
